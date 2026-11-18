@@ -1,117 +1,46 @@
 <!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Casa nelle Dolomiti — The Mountain Journal</title><style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
-:root{--paper:#f3efe6;--ink:#29342e;--muted:#69746a;--gold:#aa8560}*{box-sizing:border-box}body{margin:0;background:#17231f;color:var(--ink);font-family:'DM Sans',Arial,sans-serif}.top{height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(14px,4vw,54px);color:#eeeae2;gap:12px}.brand{font-family:'Playfair Display',Georgia,serif;font-size:clamp(17px,2vw,23px)}.tools{display:flex;align-items:center;gap:14px}select{background:#25352d;border:1px solid #6a786c;border-radius:5px;color:white;padding:9px;font:inherit}button{cursor:pointer;border:0}.stage{height:calc(100dvh - 132px);min-height:480px;display:flex;align-items:center;justify-content:center;padding:12px 50px;perspective:1700px}.book{height:100%;width:min(1200px,100%);display:grid;grid-template-columns:1fr 1fr;filter:drop-shadow(0 15px 28px #0006);position:relative}.page{background:var(--paper);height:100%;min-height:0;overflow:hidden;position:relative;display:flex;flex-direction:column}.page:first-child{border-right:1px solid #c7c1b5}.page:last-child{border-left:1px solid #fff9}.inner{height:100%;display:flex;flex-direction:column;padding:clamp(20px,3.6vw,54px);overflow:auto}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.22em;color:#7a6d5a;margin-bottom:18px}.title{font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:clamp(27px,3vw,46px);line-height:1.09;margin:0 0 22px}.sub{font-family:'Playfair Display',Georgia,serif;font-size:clamp(17px,1.8vw,26px);line-height:1.4}.body{font-size:clamp(13px,1.15vw,16px);line-height:1.85;color:#475149;max-width:520px}.photo{width:100%;min-height:0;object-fit:contain;display:block}.full{height:100%;width:100%;object-fit:contain;background:#202d29}.photo-area{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden}.photo-area img{max-width:100%;max-height:100%;object-fit:contain}.cover{background:#182a2a;color:white;position:relative;justify-content:flex-end}.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.cover:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 36%,#0c1a1bcc)}.cover-content{position:relative;z-index:1;padding:clamp(25px,4vw,60px);text-shadow:0 1px 12px #0008}.cover .eyebrow{color:#e9ded0}.cover .title{font-size:clamp(29px,3.2vw,48px)}.gallery-page{display:flex;flex-direction:column;background:var(--paper)}.gallery-photo{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;background:#e7e3da;padding:12px}.gallery-photo img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain}.gallery-caption{flex:none;min-height:76px;padding:16px 24px 18px;text-align:center;font-family:Georgia,serif;font-size:clamp(15px,1.45vw,21px);line-height:1.35;color:#334339}.gallery-caption small{display:block;font:10px Arial,sans-serif;letter-spacing:.19em;color:#8b8274;margin-bottom:6px}.number{margin-top:auto;font-size:11px;letter-spacing:.14em;color:#978a78;padding-top:15px}.photo-credit{font-size:11px;color:#9d9b91;margin-top:8px}.split{display:grid;grid-template-rows:55% 45%;height:100%}.split .inner{padding-top:20px}.split img{height:100%;width:100%;object-fit:contain;background:#dedbd3}.price{font-family:'Playfair Display',Georgia,serif;font-size:clamp(42px,5vw,80px);line-height:1;margin:15px 0}.tag{font-size:12px;text-transform:uppercase;letter-spacing:.15em;color:#8c765e}.cta{display:inline-block;background:#344b3c;color:white;text-decoration:none;padding:14px 18px;margin:10px 10px 0 0;font-size:13px;font-weight:600}.cta.secondary{background:transparent;color:#344b3c;border:1px solid #344b3c}.controls{height:64px;display:flex;align-items:center;justify-content:center;gap:20px;color:#e5e4de}.controls button{border:1px solid #77857c;background:#283a30;color:white;width:42px;height:40px;border-radius:50%;font-size:20px}.controls button:disabled{opacity:.3;cursor:default}.counter{min-width:105px;text-align:center;font-size:13px;letter-spacing:.12em}.hint{font-size:12px;color:#c2cbc1}.turn-next{animation:turnNext .46s ease both;transform-origin:left center}.turn-prev{animation:turnPrev .46s ease both;transform-origin:right center}@keyframes turnNext{0%{transform:rotateY(0deg);opacity:1}48%{transform:rotateY(-18deg);opacity:.68}100%{transform:rotateY(0deg);opacity:1}}@keyframes turnPrev{0%{transform:rotateY(0deg);opacity:1}48%{transform:rotateY(18deg);opacity:.68}100%{transform:rotateY(0deg);opacity:1}}@media(max-width:750px){.top{height:58px}.stage{height:calc(100dvh - 116px);padding:8px 12px;min-height:400px}.book{display:block;max-width:530px}.page{width:100%;border:0!important}.page.mobile-hidden{display:none}.inner{padding:clamp(24px,7vw,42px)}.title{font-size:clamp(36px,9vw,55px)}.body{font-size:15px}.cover .title{font-size:clamp(38px,9vw,58px)}.hint{display:none}.controls{height:58px}.brand{font-size:17px}}@media(max-width:750px){
-/* Compact gallery: keep each photograph immediately above its caption. */
-.stage{height:440px;min-height:0;padding:6px 10px}
-.book{height:100%}
-.gallery-page{justify-content:center;background:#e7e3da}
-.gallery-photo{flex:0 1 auto;height:auto;max-height:calc(100% - 58px);padding:6px 8px 0}
-.gallery-photo img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain}
-.gallery-caption{min-height:0;padding:10px 14px 12px;background:#e7e3da;font-size:clamp(14px,3.8vw,18px)}
+:root{--paper:#f3efe6;--ink:#29342e;--muted:#69746a;--gold:#aa8560}*{box-sizing:border-box}body{margin:0;background:#17231f;color:var(--ink);font-family:'DM Sans',Arial,sans-serif}.top{height:68px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(14px,4vw,54px);color:#eeeae2;gap:12px}.brand{font-family:'Playfair Display',Georgia,serif;font-size:clamp(17px,2vw,23px)}.tools{display:flex;align-items:center;gap:14px}select{background:#25352d;border:1px solid #6a786c;border-radius:5px;color:white;padding:9px;font:inherit}button{cursor:pointer;border:0}.stage{height:calc(100dvh - 132px);min-height:480px;display:flex;align-items:center;justify-content:center;padding:12px 50px;perspective:1700px}.book{height:100%;width:min(1200px,100%);display:grid;grid-template-columns:1fr 1fr;filter:drop-shadow(0 15px 28px #0006);position:relative}.page{background:var(--paper);height:100%;min-height:0;overflow:hidden;position:relative;display:flex;flex-direction:column}.page:first-child{border-right:1px solid #c7c1b5}.page:last-child{border-left:1px solid #fff9}.inner{height:100%;display:flex;flex-direction:column;padding:clamp(20px,3.6vw,54px);overflow:auto}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.22em;color:#7a6d5a;margin-bottom:18px}.title{font-family:'Playfair Display',Georgia,serif;font-weight:400;font-size:clamp(27px,3vw,46px);line-height:1.09;margin:0 0 22px}.sub{font-family:'Playfair Display',Georgia,serif;font-size:clamp(17px,1.8vw,26px);line-height:1.4}.body{font-size:clamp(13px,1.15vw,16px);line-height:1.85;color:#475149;max-width:520px}.photo{width:100%;min-height:0;object-fit:contain;display:block}.full{height:100%;width:100%;object-fit:contain;background:#202d29}.photo-area{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;overflow:hidden}.photo-area img{max-width:100%;max-height:100%;object-fit:contain}.cover{background:#182a2a;color:white;position:relative;justify-content:flex-end}.cover img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain}.cover:after{content:'';position:absolute;inset:0;background:linear-gradient(transparent 36%,#0c1a1bcc)}.cover-content{position:relative;z-index:1;padding:clamp(25px,4vw,60px);text-shadow:0 1px 12px #0008}.cover .eyebrow{color:#e9ded0}.cover .title{font-size:clamp(29px,3.2vw,48px)}.gallery-page{display:flex;flex-direction:column;background:var(--paper)}.gallery-photo{flex:1;min-height:0;display:flex;align-items:center;justify-content:center;background:#e7e3da;padding:12px}.gallery-photo img{max-width:100%;max-height:100%;width:100%;height:100%;object-fit:contain}.gallery-caption{flex:none;min-height:76px;padding:16px 24px 18px;text-align:center;font-family:Georgia,serif;font-size:clamp(15px,1.45vw,21px);line-height:1.35;color:#334339}.gallery-caption small{display:block;font:10px Arial,sans-serif;letter-spacing:.19em;color:#8b8274;margin-bottom:6px}.number{margin-top:auto;font-size:11px;letter-spacing:.14em;color:#978a78;padding-top:15px}.photo-credit{font-size:11px;color:#9d9b91;margin-top:8px}.split{display:grid;grid-template-rows:55% 45%;height:100%}.split .inner{padding-top:20px}.split img{height:100%;width:100%;object-fit:contain;background:#dedbd3}.price{font-family:'Playfair Display',Georgia,serif;font-size:clamp(42px,5vw,80px);line-height:1;margin:15px 0}.tag{font-size:12px;text-transform:uppercase;letter-spacing:.15em;color:#8c765e}.cta{display:inline-block;background:#344b3c;color:white;text-decoration:none;padding:14px 18px;margin:10px 10px 0 0;font-size:13px;font-weight:600}.cta.secondary{background:transparent;color:#344b3c;border:1px solid #344b3c}.controls{height:64px;display:flex;align-items:center;justify-content:center;gap:20px;color:#e5e4de}.controls button{border:1px solid #77857c;background:#283a30;color:white;width:42px;height:40px;border-radius:50%;font-size:20px}.controls button:disabled{opacity:.3;cursor:default}.counter{min-width:105px;text-align:center;font-size:13px;letter-spacing:.12em}.hint{font-size:12px;color:#c2cbc1}.turn-next{animation:turnNext .46s ease both;transform-origin:left center}.turn-prev{animation:turnPrev .46s ease both;transform-origin:right center}@keyframes turnNext{0%{transform:rotateY(0deg);opacity:1}48%{transform:rotateY(-18deg);opacity:.68}100%{transform:rotateY(0deg);opacity:1}}@keyframes turnPrev{0%{transform:rotateY(0deg);opacity:1}48%{transform:rotateY(18deg);opacity:.68}100%{transform:rotateY(0deg);opacity:1}}
+/* One consolidated mobile layout. Desktop styles above remain unchanged. */
+@media (max-width:750px) {
+  html,body { margin:0; }
+  .top { height:54px; padding:5px 12px; gap:8px; }
+  .brand { font-size:14px; line-height:1.2; min-width:0; }
+  .brand span { display:block; font-size:11px; }
+  .tools { flex-shrink:0; }
+  select { max-width:44vw; font-size:13px; padding:8px; }
+  .stage { height:440px; min-height:0; padding:6px 10px; }
+  .book { display:block; height:100%; max-width:530px; }
+  .page { width:100%; border:0!important; }
+  .inner { padding:18px 20px; }
+  .title { font-size:clamp(29px,7.5vw,38px); }
+  .body { font-size:13px; line-height:1.5; }
+  .cover .title { font-size:clamp(34px,9vw,52px); }
+  .gallery-page { justify-content:center; background:#e7e3da; }
+  .gallery-photo { flex:0 1 auto; height:auto; max-height:calc(100% - 58px); padding:6px 8px 0; }
+  .gallery-photo img { width:auto; height:auto; max-width:100%; max-height:100%; object-fit:contain; }
+  .gallery-caption { min-height:0; padding:10px 14px 12px; background:#e7e3da; font-size:clamp(14px,3.8vw,18px); }
+  .hint { display:none; }
+  .controls { height:54px; justify-content:center; gap:22px; padding-right:76px; }
+  .counter { min-width:65px; }
+  /* Intro: start at top so the first lines can always be scrolled back into view. */
+  .intro-page .inner { justify-content:flex-start!important; overflow-y:auto; overscroll-behavior:contain; padding:14px 20px; }
+  .intro-page .eyebrow { margin-bottom:8px; }
+  .intro-page .title { font-size:29px; margin-bottom:10px; }
+  .intro-page .sub { font-size:18px; line-height:1.3; margin:8px 0; }
+  .intro-page .body { font-size:13px; line-height:1.5; margin:6px 0; }
+  /* Offer: both links visible on compact screens. */
+  .offer-page .inner { justify-content:flex-start!important; overflow-y:auto; padding:14px 18px; }
+  .offer-page .eyebrow { margin-bottom:7px; }
+  .offer-page .title { font-size:30px; margin-bottom:8px; }
+  .offer-page .body { font-size:13px; line-height:1.4; margin:0 0 6px; }
+  .offer-page .price { font-size:48px; margin:7px 0; }
+  .offer-page .cta { display:block; width:100%; margin:7px 0 0; padding:10px; font-size:12px; text-align:center; }
+  .offer-page .offer-links { margin-top:9px!important; width:100%; }
+  /* Closing page uses the same top-aligned overflow behavior when needed. */
+  .closing-page .inner { justify-content:safe center!important; overflow-y:auto; }
 }
-@media(prefers-reduced-motion:reduce){.turn-next,.turn-prev{animation:none}}
-  
-@media (max-width: 750px) {
-  .top {
-    height: 54px;
-    padding: 5px 12px;
-  }
-
-  .brand {
-    font-size: 14px;
-    line-height: 1.2;
-  }
-
-  .brand span {
-    display: block;
-    font-size: 11px;
-  }
-
-  .controls {
-    height: 54px;
-    justify-content: center;
-    gap: 22px;
-    padding-right: 76px;
-  }
-
-  .counter {
-    min-width: 65px;
-  }
-
-  .page:has(.price) .inner {
-    padding: 14px 18px;
-    justify-content: flex-start !important;
-  }
-
-  .page:has(.price) .eyebrow {
-    margin-bottom: 7px;
-  }
-
-  .page:has(.price) .title {
-    font-size: 30px;
-    margin-bottom: 8px;
-  }
-
-  .page:has(.price) .body {
-    font-size: 13px;
-    line-height: 1.4;
-    margin: 0 0 6px;
-  }
-
-  .page:has(.price) .price {
-    font-size: 48px;
-    margin: 7px 0;
-  }
-
-  .page:has(.price) .cta {
-    display: block;
-    width: 100%;
-    margin: 7px 0 0;
-    padding: 10px;
-    font-size: 12px;
-    text-align: center;
-  }
-
-  .page:has(.price) .inner > div:last-child {
-    margin-top: 9px !important;
-    width: 100%;
-  }
-}
-  
-@media (max-width: 750px) {
-  .page:has(.number) .inner {
-    padding: 14px 20px;
-  }
-
-  .page:has(.number) .eyebrow {
-    margin-bottom: 8px;
-  }
-
-  .page:has(.number) .title {
-    font-size: 29px;
-    margin-bottom: 10px;
-  }
-
-  .page:has(.number) .sub {
-    font-size: 18px;
-    line-height: 1.3;
-    margin: 8px 0;
-  }
-
-  .page:has(.number) .body {
-    font-size: 13px;
-    line-height: 1.5;
-    margin: 6px 0;
-  }
-}
-  
-@media (max-width: 750px) {
-  .page:has(.number) .inner {
-    justify-content: flex-start !important;
-    overflow-y: auto;
-    min-height: 0;
-  }
-}
+@media (prefers-reduced-motion:reduce) { .turn-next,.turn-prev { animation:none; } }
 </style></head><body><header class="top"><div class="brand">Casa nelle Dolomiti <span style="opacity:.5">/ The Mountain Journal</span></div><div class="tools"><select id="language" aria-label="Language"><option value="en">EN · English</option><option value="it">IT · Italiano</option><option value="de">DE · Deutsch</option><option value="ro">RO · Română</option><option value="fr">FR · Français</option><option value="es">ES · Español</option></select></div></header><main class="stage"><div id="book" class="book" aria-live="polite"></div></main><footer class="controls"><button id="prev" aria-label="Previous page">‹</button><span class="counter" id="counter"></span><button id="next" aria-label="Next page">›</button><span class="hint" id="hint">Use arrows or swipe to turn pages</span></footer>
 <script>
 // All photos are original files, copied byte-for-byte. No filters or image processing.
@@ -142,9 +71,9 @@ const closing={en:['Until we meet in the mountains','The mountains will stay. Th
 function content(n){const p=pages[n],t=T[lang];if(!p)return '<div class="page"></div>';
 if(p.kind==='cover')return `<div class="page cover"><img src="photos/${photos[p.photo]}" alt="Casa nelle Dolomiti" loading="eager"><div class="cover-content"><div class="eyebrow">GREA DI CADORE · ITALY</div><h1 class="title">Casa nelle<br>Dolomiti</h1><div class="sub">${esc(t[0])}</div></div></div>`;
 if(p.kind==='photo')return `<div class="page gallery-page"><div class="gallery-photo"><img src="photos/${photos[p.photo]}" alt="Mountain experience photograph" loading="lazy"></div><div class="gallery-caption">${esc(lines[lang][p.photo])}</div></div>`;
-if(p.kind==='intro')return `<div class="page"><div class="inner" style="justify-content:center"><div class="eyebrow">GREA DI CADORE · 1931</div><h2 class="title">${esc(t[1])}</h2><p class="body">${esc(t[2])}</p><h3 class="sub">${esc(t[3])}</h3><p class="body">${esc(t[4])}</p><div class="number">CASA NELLE DOLOMITI</div></div></div>`;
-if(p.kind==='offer')return `<div class="page"><div class="inner" style="justify-content:center"><div class="eyebrow">${esc(t[20])}</div><h2 class="title">${esc(t[11])}</h2><p class="body">${esc(t[12])}</p><div class="price">680 €</div><div class="tag">${esc(t[13])}</div><div style="margin-top:25px"><a class="cta" href="${hiking}" target="_blank" rel="noopener">${esc(t[14])}</a><a class="cta secondary" href="${whatsapp}" target="_blank" rel="noopener">${esc(t[15])}</a></div></div></div>`;
-const c=closing[lang];return `<div class="page"><div class="inner" style="justify-content:center;text-align:center;align-items:center"><div class="eyebrow">CASA NELLE DOLOMITI · 1931</div><h2 class="title">${esc(c[0])}</h2><p class="sub">${esc(c[1])}</p><div class="number">GREA DI CADORE · ITALY</div></div></div>`;}
+if(p.kind==='intro')return `<div class="page intro-page"><div class="inner" style="justify-content:center"><div class="eyebrow">GREA DI CADORE · 1931</div><h2 class="title">${esc(t[1])}</h2><p class="body">${esc(t[2])}</p><h3 class="sub">${esc(t[3])}</h3><p class="body">${esc(t[4])}</p><div class="number">CASA NELLE DOLOMITI</div></div></div>`;
+if(p.kind==='offer')return `<div class="page offer-page"><div class="inner" style="justify-content:center"><div class="eyebrow">${esc(t[20])}</div><h2 class="title">${esc(t[11])}</h2><p class="body">${esc(t[12])}</p><div class="price">680 €</div><div class="tag">${esc(t[13])}</div><div class="offer-links" style="margin-top:25px"><a class="cta" href="${hiking}" target="_blank" rel="noopener">${esc(t[14])}</a><a class="cta secondary" href="${whatsapp}" target="_blank" rel="noopener">${esc(t[15])}</a></div></div></div>`;
+const c=closing[lang];return `<div class="page closing-page"><div class="inner" style="justify-content:center;text-align:center;align-items:center"><div class="eyebrow">CASA NELLE DOLOMITI · 1931</div><h2 class="title">${esc(c[0])}</h2><p class="sub">${esc(c[1])}</p><div class="number">GREA DI CADORE · ITALY</div></div></div>`;}
 function render(dir=0){const left=mobile()?index:Math.floor(index/2)*2;book.innerHTML=content(left)+(!mobile()?content(left+1):'');document.getElementById('counter').textContent=mobile()?`${index+1} / ${total}`:`${left+1}${left+1<total?'–'+(left+2):''} / ${total}`;document.getElementById('prev').disabled=index===0;document.getElementById('next').disabled=mobile()?index>=total-1:left+2>=total;if(dir){book.classList.remove('turn-next','turn-prev');void book.offsetWidth;book.classList.add(dir>0?'turn-next':'turn-prev');setTimeout(()=>book.classList.remove('turn-next','turn-prev'),500)}}
 function move(d){const next=mobile()?index+d:Math.floor(index/2)*2+d*2;if(next<0||next>=total)return;index=next;render(d)}document.getElementById('prev').onclick=()=>move(-1);document.getElementById('next').onclick=()=>move(1);document.getElementById('language').onchange=e=>{lang=e.target.value;document.documentElement.lang=lang;render()};window.addEventListener('resize',()=>{if(!mobile())index=Math.floor(index/2)*2;render()});document.addEventListener('keydown',e=>{if(e.key==='ArrowRight')move(1);if(e.key==='ArrowLeft')move(-1)});let sx=0;book.addEventListener('touchstart',e=>{sx=e.changedTouches[0].screenX},{passive:true});book.addEventListener('touchend',e=>{const dx=e.changedTouches[0].screenX-sx;if(Math.abs(dx)>50)move(dx<0?1:-1)},{passive:true});render();
 </script></body></html>

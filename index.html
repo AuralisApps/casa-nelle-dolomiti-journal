@@ -10,6 +10,73 @@
 .gallery-caption{min-height:0;padding:10px 14px 12px;background:#e7e3da;font-size:clamp(14px,3.8vw,18px)}
 }
 @media(prefers-reduced-motion:reduce){.turn-next,.turn-prev{animation:none}}
+  
+@media (max-width: 750px) {
+  .top {
+    height: 54px;
+    padding: 5px 12px;
+  }
+
+  .brand {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  .brand span {
+    display: block;
+    font-size: 11px;
+  }
+
+  .controls {
+    height: 54px;
+    justify-content: center;
+    gap: 22px;
+    padding-right: 76px;
+  }
+
+  .counter {
+    min-width: 65px;
+  }
+
+  .page:has(.price) .inner {
+    padding: 14px 18px;
+    justify-content: flex-start !important;
+  }
+
+  .page:has(.price) .eyebrow {
+    margin-bottom: 7px;
+  }
+
+  .page:has(.price) .title {
+    font-size: 30px;
+    margin-bottom: 8px;
+  }
+
+  .page:has(.price) .body {
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0 0 6px;
+  }
+
+  .page:has(.price) .price {
+    font-size: 48px;
+    margin: 7px 0;
+  }
+
+  .page:has(.price) .cta {
+    display: block;
+    width: 100%;
+    margin: 7px 0 0;
+    padding: 10px;
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .page:has(.price) .inner > div:last-child {
+    margin-top: 9px !important;
+    width: 100%;
+  }
+}
 </style></head><body><header class="top"><div class="brand">Casa nelle Dolomiti <span style="opacity:.5">/ The Mountain Journal</span></div><div class="tools"><select id="language" aria-label="Language"><option value="en">EN · English</option><option value="it">IT · Italiano</option><option value="de">DE · Deutsch</option><option value="ro">RO · Română</option><option value="fr">FR · Français</option><option value="es">ES · Español</option></select></div></header><main class="stage"><div id="book" class="book" aria-live="polite"></div></main><footer class="controls"><button id="prev" aria-label="Previous page">‹</button><span class="counter" id="counter"></span><button id="next" aria-label="Next page">›</button><span class="hint" id="hint">Use arrows or swipe to turn pages</span></footer>
 <script>
 // All photos are original files, copied byte-for-byte. No filters or image processing.
